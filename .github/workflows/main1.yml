@@ -27,11 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run nbx_user.py
-        run: nbx_user.py
+        run: plot/nbx_user.py
       
       # Runs a single command using the runners shell
       - name: Run exe.py
-        run: exe.py
+        run: plot/exe.py
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
