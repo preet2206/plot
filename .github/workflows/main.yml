@@ -33,8 +33,7 @@ jobs:
 
       # Runs a cURL                                                                                                                                                                                                                                                                                                                                     
       - name: Run cURL
-        run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H {"Authorization":"${{ secrets.GH_SECRET_EX }}"}
-
+        run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H {"Authorization":"${{ secrets.GH_SECRET_EX }}"} --http1.1
 
 
       # Runs a set of commands using the runners shell
