@@ -29,8 +29,8 @@ jobs:
 
 
       # Runs a cURL
-      # - name: 'run' curl
-      #   run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H {"Authorization":"${{ secrets.GH_SECRET_EX }}"}
+      - name: 'run' curl
+        run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H {"Authorization":"${{ secrets.GH_SECRET_EX }}"}
 
 
 
