@@ -43,7 +43,7 @@ jobs:
       #     method: 'POST'
       #     customHeaders: '{"Authorization": "Bearer ${{ secrets.GH_SECRET_EX }}"}'
       
-      - name: 'run' curl 
+      - name: 'run' curl
         run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H "${{ secrets.GH_SECRET_EX }}"
 
 
