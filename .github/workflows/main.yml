@@ -42,15 +42,11 @@ jobs:
       #     url: 'https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger'
       #     method: 'POST'
       #     customHeaders: '{"Authorization": "Bearer ${{ secrets.GH_SECRET_EX }}"}'
+      
+      - name: 'run' curl 
+        run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H "${{ secrets.GH_SECRET_EX }}"
 
 
-  curl:
-    runs-on: ubuntu-latest
-    steps:
-      - name: curl
-        uses: wei/curl@v1
-        with:
-          args: -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H "${{ secrets.GH_SECRET_EX }}"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
