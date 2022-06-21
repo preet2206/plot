@@ -25,26 +25,11 @@ jobs:
           # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+    
+     
 
-      # # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v3
-      #   with:
-      #       submodules: true
-            # token: ${{ secrets.GH_SECRET_EX }}
-
-      # - name: curl
-      #   uses: wei/curl@v1
-      #   with:
-      #     args: -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H "${{ secrets.GH_SECRET_EX }}"
-      # - name: NBX-Jobs Trigger
-      #   uses: fjogeleit/http-request-action@v1
-      #   with:
-      #     url: 'https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger'
-      #     method: 'POST'
-      #     customHeaders: '{"Authorization": "Bearer ${{ secrets.GH_SECRET_EX }}"}'
-      
       - name: 'run' curl
-        run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H "${{ secrets.GH_SECRET_EX }}"
+        run: curl -X POST https://app.nimblebox.ai/api/v1/workpace/3oausmqp/job/uk7x3dni/trigger -H {"Authorization":"${{ secrets.GH_SECRET_EX }}"}
 
 
 
