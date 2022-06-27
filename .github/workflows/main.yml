@@ -40,7 +40,7 @@ jobs:
           -H 'authorization: Bearer ${{ secrets.GH_SECRET_EX }}' \
           -H 'Content-Type": application/json'\
           -d '{}'
-
+          --http1.1
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
