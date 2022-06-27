@@ -37,8 +37,8 @@ jobs:
         run : |
           curl -X POST \
           'https://app.nimblebox.ai/api/v1/workspace/3oausmqp/job/uk7x3dni/trigger' \
-          -H "Authorization: Bearer ${{ secrets.GH_SECRET_EX }}" \
-          -H "Content-Type": application/json" \
+          -H 'authorization: Bearer ${{ secrets.GH_SECRET_EX }}' \
+          -H 'Content-Type": application/json'\
           -d '{}'
 
       # Runs a set of commands using the runners shell
